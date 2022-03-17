@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Gastos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="gestion_usuario">
+        <h3 class="gestion_usuario--titulo">
+          Bienvenido:
+          <span class="gestion_usuario--usuario" id="titulo-usuario"></span>
+        </h3>
+
+        <button class="gestion_usuario--boton" type="submit" id="close">
+          Cerrar Session
+        </button>
+      </div>
+      <div class="gestion_periodo">
+        <div class="periodo_actual">
+          <form class="form_periodo" id="form-periodo">
+            <select
+              class="select_periodo"
+              name="option-periodos"
+              id="option-periodos"
+            ></select>
+            <button class="boton_cambiar_periodo" type="submit">Aplicar</button>
+          </form>
+        </div>
+
+        <div class="nuevo_periodo">
+          <form class="form_nuevo_periodo" id="form-nuevo-periodo">
+            <input
+              class="input_nuevo_periodo"
+              id="periodo"
+              type="text"
+              name="nombre-periodo"
+              placeholder="Nombre del nuevo periodo"
+            />
+            <button class="boton_crear_periodo" type="submit">Crear</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="contenedor">
+      <div class="datos_generales">
+        <div class="generales--titulo">
+          Presupuesto:
+          <span class="generales--valor" id="presupuesto-valor"></span>
+        </div>
+        <div class="generales--titulo">
+          Periodo:
+          <span class="generales--valor" id="presupuesto-periodo"></span>
+        </div>
+
+        <div class="generales--titulo">
+          Ingresos totales:
+          <span class="generales--valor" id="ingresos-valor"></span>
+        </div>
+
+        <div class="generales--titulo">
+          Egresos totales:
+          <span class="generales--valor" id="egresos-valor"></span>
+        </div>
+      </div>
+
+      <div class="carga_movimientos">
+        <!-- form carga datos -->
+        <div class="contenedor_form_mov">
+          <form class="form_mov" id="form-info">
+            <label for="opcion">Ingreso/Egreso: </label>
+            <select class="mov_select" name="opcion" id="ingreso_egreso-opcion">
+              <option value="+">+</option>
+              <option value="-">-</option>
+            </select>
+
+            <input
+              class="mov_input"
+              name="detalle"
+              type="text"
+              id="detalle"
+              placeholder="Detalle"
+            />
+
+            <input
+              class="mov_input"
+              name="valor"
+              type="number"
+              id="monto"
+              placeholder="Valor"
+            />
+
+            <button type="submit" class="mov_boton" id="button">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="datos_weather" id="weather"></div>
+
+      <div class="datos_dolar" id="dolar"></div>
+    </div>
+
+    <!-- tablas -->
+    <div class="row mt-5">
+      <!-- Egreso -->
+      <div class="col mov_egresos">
+        <h2 class="text-center">Egresos</h2>
+        <table class="table" id="tabla-mov-egresos">
+          <tr>
+            <th>Descripcion</th>
+            <th>Monto</th>
+            <th>Accion</th>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Ingreso -->
+      <div class="col mov_ingresos">
+        <h2 class="text-center">Ingresos</h2>
+        <table class="table" id="tabla-mov-ingresos">
+          <tr>
+            <th>Descripcion</th>
+            <th>Monto</th>
+            <th>Accion</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/async.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

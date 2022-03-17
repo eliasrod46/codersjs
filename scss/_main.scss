@@ -1,0 +1,110 @@
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  margin-top: -24px;
+
+  .datos_generales {
+    background-color: #505050;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .generales--titulo {
+      font-size: 25px;
+      text-align: center;
+      .generales--valor {
+        font-weight: 600;
+        color: #28be78;
+      }
+    }
+  }
+
+  .datos_weather {
+    background-color: #505050;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .weather--titulo {
+      font-size: 18px;
+      text-align: center;
+      .weather--valor {
+        font-weight: 600;
+        color: #28be78;
+      }
+    }
+  }
+
+  .datos_dolar {
+    background-color: #505050;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .dolar--titulo {
+      font-size: 20px;
+      text-align: center;
+      .dolar--valor {
+        font-weight: 600;
+        color: #28be78;
+      }
+    }
+  }
+
+  .carga_movimientos {
+    background-color: #505050;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+    .contenedor_form_mov {
+      text-align: center;
+
+      .form_mov {
+        display: flex;
+        flex-direction: column;
+
+        .mov_select {
+          width: 55px;
+          padding: 5px;
+          margin: 0 auto;
+          background-color: #cacaca;
+          outline: none;
+        }
+        .mov_input {
+          margin: 7px;
+          padding: 7px;
+          background-color: transparent;
+          border: none;
+          border-bottom: 3px solid #28be78;
+          outline: none;
+        }
+
+        .mov_boton {
+          padding: 5px;
+          width: 9rem;
+          margin: 2rem auto;
+          color: #ffffff;
+          background: #3dd28d;
+          border: 3px solid #28be78;
+          border-radius: 20px;
+          transition: all 500ms;
+        }
+
+        .mov_boton:hover {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+}

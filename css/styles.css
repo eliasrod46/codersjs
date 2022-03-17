@@ -1,0 +1,271 @@
+/*Base*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.index_container {
+  background-color: #1a1a1a;
+  height: 100vh;
+}
+.index_container .titulo_index {
+  text-align: center;
+  color: #00ffc8;
+  font-size: 5rem;
+}
+.index_container .form_container {
+  text-align: center;
+}
+.index_container .form_container .form_registro {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  margin: 2rem auto;
+  background-color: #505050;
+  border-radius: 20px;
+}
+.index_container .form_container .form_registro .registro_input {
+  margin: 7px;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #28be78;
+  outline: none;
+}
+.index_container .form_container .form_registro .registro_boton {
+  padding: 5px;
+  width: 9rem;
+  margin: 2rem auto;
+  color: #ffffff;
+  background: #3dd28d;
+  border: 3px solid #28be78;
+  border-radius: 20px;
+  transition: all 500ms;
+}
+.index_container .form_container .form_registro .registro_boton:hover {
+  transform: scale(1.1, 1.1);
+}
+.index_container .form_container .form_ingreso {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  margin: 2rem auto;
+  background-color: #505050;
+  border-radius: 20px;
+}
+.index_container .form_container .form_ingreso .ingreso_input {
+  margin: 7px;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #28acbe;
+  outline: none;
+}
+.index_container .form_container .form_ingreso .ingreso_boton {
+  padding: 5px;
+  width: 9rem;
+  margin: 2rem auto;
+  color: #ffffff;
+  background: #3d9bd2;
+  border: 3px solid #28acbe;
+  border-radius: 20px;
+  transition: all 500ms;
+}
+.index_container .form_container .form_ingreso .ingreso_boton:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.nav {
+  background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430);
+}
+.nav .gestion_usuario {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.nav .gestion_usuario .gestion_usuario--titulo {
+  margin: 5px;
+  text-align: center;
+  font-size: 3rem;
+  color: #cacaca;
+}
+.nav .gestion_usuario .gestion_usuario--titulo .gestion_usuario--usuario {
+  color: #020202;
+}
+.nav .gestion_usuario .gestion_usuario--boton {
+  width: 8rem;
+  margin: 0.8rem auto;
+  padding: 0.6rem;
+  color: #121212;
+  background: #d23d3d;
+  border: 3px solid #db2f2f;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0px 0px 14px 9px rgba(0, 0, 0, 0.41);
+  transition: all 500ms;
+}
+.nav .gestion_usuario .gestion_usuario--boton:hover {
+  transform: scale(1.1, 1.1);
+}
+.nav .gestion_periodo {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+.nav .gestion_periodo .periodo_actual .form_periodo {
+  display: flex;
+  flex-direction: column;
+}
+.nav .gestion_periodo .periodo_actual .form_periodo .select_periodo {
+  padding: 5px;
+  background-color: #cacaca;
+  outline: none;
+}
+.nav .gestion_periodo .periodo_actual .form_periodo .boton_cambiar_periodo {
+  padding: 5px;
+  width: 9rem;
+  margin: 1rem auto;
+  color: #ffffff;
+  background: #3d9bd2;
+  border: 3px solid #28acbe;
+  border-radius: 20px;
+  transition: all 500ms;
+}
+.nav
+  .gestion_periodo
+  .periodo_actual
+  .form_periodo
+  .boton_cambiar_periodo:hover {
+  transform: scale(1.1, 1.1);
+}
+.nav .gestion_periodo .nuevo_periodo .form_nuevo_periodo {
+  display: flex;
+  flex-direction: column;
+}
+.nav .gestion_periodo .nuevo_periodo .form_nuevo_periodo .input_nuevo_periodo {
+  padding: 5px;
+  background-color: #cacaca;
+  outline: none;
+}
+.nav .gestion_periodo .nuevo_periodo .form_nuevo_periodo .boton_crear_periodo {
+  padding: 5px;
+  width: 9rem;
+  margin: 1rem auto;
+  color: #ffffff;
+  background: #3d9bd2;
+  border: 3px solid #28acbe;
+  border-radius: 20px;
+  transition: all 500ms;
+}
+.nav
+  .gestion_periodo
+  .nuevo_periodo
+  .form_nuevo_periodo
+  .boton_crear_periodo:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  margin-top: -24px;
+}
+.contenedor .datos_generales {
+  background-color: #505050;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contenedor .datos_generales .generales--titulo {
+  font-size: 25px;
+  text-align: center;
+}
+.contenedor .datos_generales .generales--titulo .generales--valor {
+  font-weight: 600;
+  color: #28be78;
+}
+.contenedor .datos_weather {
+  background-color: #505050;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contenedor .datos_weather .weather--titulo {
+  font-size: 18px;
+  text-align: center;
+}
+.contenedor .datos_weather .weather--titulo .weather--valor {
+  font-weight: 600;
+  color: #28be78;
+}
+.contenedor .datos_dolar {
+  background-color: #505050;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contenedor .datos_dolar .dolar--titulo {
+  font-size: 20px;
+  text-align: center;
+}
+.contenedor .datos_dolar .dolar--titulo .dolar--valor {
+  font-weight: 600;
+  color: #28be78;
+}
+.contenedor .carga_movimientos {
+  background-color: #505050;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+.contenedor .carga_movimientos .contenedor_form_mov {
+  text-align: center;
+}
+.contenedor .carga_movimientos .contenedor_form_mov .form_mov {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor .carga_movimientos .contenedor_form_mov .form_mov .mov_select {
+  width: 55px;
+  padding: 5px;
+  margin: 0 auto;
+  background-color: #cacaca;
+  outline: none;
+}
+.contenedor .carga_movimientos .contenedor_form_mov .form_mov .mov_input {
+  margin: 7px;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #28be78;
+  outline: none;
+}
+.contenedor .carga_movimientos .contenedor_form_mov .form_mov .mov_boton {
+  padding: 5px;
+  width: 9rem;
+  margin: 2rem auto;
+  color: #ffffff;
+  background: #3dd28d;
+  border: 3px solid #28be78;
+  border-radius: 20px;
+  transition: all 500ms;
+}
+.contenedor .carga_movimientos .contenedor_form_mov .form_mov .mov_boton:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*# sourceMappingURL=styles.css.map */

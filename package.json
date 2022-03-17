@@ -1,0 +1,20 @@
+{
+  "name": "10-incorporar-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-start": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasrod46/coderjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliasrod46/coderjs/issues"
+  },
+  "homepage": "https://github.com/eliasrod46/coderjs#readme"
+}

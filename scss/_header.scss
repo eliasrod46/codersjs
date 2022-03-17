@@ -1,0 +1,99 @@
+.nav {
+  background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430);
+
+  .gestion_usuario {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    .gestion_usuario--titulo {
+      margin: 5px;
+      text-align: center;
+      font-size: 3rem;
+      color: #cacaca;
+
+      .gestion_usuario--usuario {
+        color: #020202;
+      }
+    }
+
+    .gestion_usuario--boton {
+      //padding: 2px;
+      width: 8rem;
+      margin: 0.8rem auto;
+      padding: 0.6rem;
+      color: #121212;
+      background: #d23d3d;
+      border: 3px solid #db2f2f;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0px 0px 14px 9px rgba(0, 0, 0, 0.41);
+      transition: all 500ms;
+    }
+    .gestion_usuario--boton:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  .gestion_periodo {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+
+    .periodo_actual {
+      .form_periodo {
+        display: flex;
+        flex-direction: column;
+
+        .select_periodo {
+          padding: 5px;
+          background-color: #cacaca;
+          outline: none;
+        }
+
+        .boton_cambiar_periodo {
+          padding: 5px;
+          width: 9rem;
+          margin: 1rem auto;
+          color: #ffffff;
+          background: #3d9bd2;
+          border: 3px solid #28acbe;
+          border-radius: 20px;
+          transition: all 500ms;
+        }
+
+        .boton_cambiar_periodo:hover {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+
+    .nuevo_periodo {
+      .form_nuevo_periodo {
+        display: flex;
+        flex-direction: column;
+        .input_nuevo_periodo {
+          padding: 5px;
+          background-color: #cacaca;
+          outline: none;
+        }
+
+        .boton_crear_periodo {
+          padding: 5px;
+          width: 9rem;
+          margin: 1rem auto;
+          color: #ffffff;
+          background: #3d9bd2;
+          border: 3px solid #28acbe;
+          border-radius: 20px;
+          transition: all 500ms;
+        }
+
+        .boton_crear_periodo:hover {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+}

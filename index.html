@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Gastos</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+  <body>
+    <div class="index_container">
+
+      <h1 class="titulo_index">Control de gastos</h1>
+      <!-- form carga datos -->
+      <div class="form_container">
+        <form class="form_registro" id="idForm-registro">
+          <input
+            class="registro_input"
+            type="text"
+            id="idUser-reg"
+            name="User"
+            placeholder="UserName"
+          />
+          <input
+            class="registro_input"
+            type="email"
+            id="idEmail-reg"
+            name="Email"
+            placeholder="email"
+          />
+          <input
+            class="registro_input"
+            type="password"
+            id="idPassword-reg"
+            name="Password"
+            placeholder="Password"
+          />
+  
+          <button type="submit" class="registro_boton">Crear Usuario</button>
+        </form>
+  
+        <form class="form_ingreso" id="idForm-ingreso">
+          <input
+            class="ingreso_input"
+            type="email"
+            id="idEmail-ing"
+            name="Email"
+            placeholder="email"
+          />
+          <input
+            class="ingreso_input"
+            type="password"
+            id="idPassword-ing"
+            name="Password"
+            placeholder="Password"
+          />
+  
+          <button type="submit" class="ingreso_boton">Inicial Session</button>
+        </form>
+        
+    </div>
+
+
+
+    <script src="js/funciones.js"></script>
+    <script src="js/app.js"></script>
+    
+
+  </body>
+</html>
