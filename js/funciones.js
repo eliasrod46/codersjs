@@ -2,22 +2,19 @@
 
 /* --------------Usuarios(Log&Reg)-------------- */
 
-//Agrega un us nuevo
+//Agrega un us nuevo(Check)
 function agregarUsuario(us, arrayUs) {
   arrayUs.push(us);
   localStorage.setItem("usuarios", JSON.stringify(arrayUs));
-
-  localStorage.setItem("us_activo", --arrayUs.length);
-
-  window.location.href = "main.html";
+  swal("Usuario Ceado!", "Por favor inicie Sesion!", "success");
 }
 
-//login
+//login(Check)
 function logUsuario(email, pass, arrayUs) {
   arrayUs.forEach((usuario, indice) => {
     if (usuario.email == email) {
       if (usuario.password == pass) {
-        localStorage.setItem("us_activo", JSON.stringify(indice));
+        localStorage.setItem("us_activo", JSON.stringify(usuario.id));
         window.location.href = "main.html";
       }
     }
@@ -26,13 +23,36 @@ function logUsuario(email, pass, arrayUs) {
 
 /* --------------Fin Usuarios(Log&Reg)-------------- */
 
+//ordeno array periodos
+function SortArray(x, y) {
+  if (x.id > y.id) {
+    return -1;
+  }
+  if (x.id < y.id) {
+    return 1;
+  }
+  return 0;
+}
+
+//Muestra los periodos en main
+function muestraPeriodos(periodos) {
+  let resultado = "";
+  let select = document.getElementById("option-periodos");
+
+  periodos.forEach((periodo, indice) => {
+    resultado += `<option value="${indice}">${periodo.nombre}</option>`;
+  });
+  if (select) {
+    select.innerHTML = resultado;
+  }
+}
+
 //recorre el arreglo y devuelve el total
 function totalArreglo(array) {
   let respuesta = 0;
 
   for (let element of array) {
     val = element.valor;
-
     respuesta += val;
   }
 
@@ -40,21 +60,40 @@ function totalArreglo(array) {
 }
 
 //devuelve datos del areglo para agregar a tabla
-function recorreArregloForTable(array) {
+function recorreArregloIngresos(array) {
   let resultado = "";
 
   arreglo = array;
-  array.forEach((element, indice) => {
+  array.forEach((element) => {
     resultado += `
         <tr>
           <td>${element.descripcion}</td>
           <td>$${element.valor}</td>
-          <td><button class="btn btn-danger" id="eliminar" >Eliminar</button></td>
+          <td><button class="del_elemento" id="del-mov" palceholder="${element.id}" onclick="eliminar(${element.id})">Eliminar</button></td>
         </tr>
         `;
   });
   return resultado;
 }
+
+
+//devuelve datos del areglo para agregar a tabla
+function recorreArregloForTable(array) {
+  let resultado = "";
+
+  arreglo = array;
+  array.forEach((element) => {
+    resultado += `
+        <tr>
+          <td>${element.descripcion}</td>
+          <td>$${element.valor}</td>
+          <td><button class="del_elemento" id="del-mov" palceholder="${element.id}" onclick="eliminar(${element.id})">Eliminar</button></td>
+        </tr>
+        `;
+  });
+  return resultado;
+}
+
 
 //Muestra el monto de diferencia entre ingresos y egresos
 function muestraPresupuesto(ingresos, egresos) {
@@ -113,16 +152,10 @@ function cargaTablas(ingresos, egresos) {
 
   ingreso += recorreArregloForTable(ingresos);
   tabla_ingre.innerHTML = ingreso;
+  
 }
-
-//Muestra los periodos en main
-function muestraPeriodos(periodos) {
-  let resultado = "";
-  let select = document.getElementById("option-periodos");
-  periodos.reverse().forEach((periodo, indice) => {
-    resultado += `<option value="${indice}">${periodo.nombre}</option>`;
-  });
-  if (select) {
-    select.innerHTML = resultado;
-  }
+function eliminar(idb){
+  let id = localStorage.getItem('us_activo');
+  console.log(idb);
+  console.log(usuarios[id]);
 }
