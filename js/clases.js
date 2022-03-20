@@ -141,4 +141,6 @@ class Movimiento {
 //     ],
 //   },
 // ];
-let usuarios = [];
+let usuarios = [{"nombre":"admin","email":"admin@admin.com","password":"admin","movimientos":[{"nombre":"Marzo - 22","ingresos":[],"egresos":[{"descripcion":"agua","valor":2000,"id":2}],"id":0}],"id":0},{"nombre":"Coder House","email":"coder@house.com","password":"1234","movimientos":[{"nombre":"Mayo - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0},{"descripcion":"gasto 2","valor":500,"id":1}],"id":2},{"nombre":"Abril - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0}],"id":1},{"nombre":"Marzo - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0},{"descripcion":"gasto 2","valor":2000,"id":1}],"id":0}],"id":1}];
+
+
