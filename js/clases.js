@@ -95,52 +95,53 @@ class Movimiento {
 }
 
 /*------------------------------------------varaibles y arrays------------------------------------------*/
-// let usuarios = [
-//   {
-//     nombre: "admin",
-//     email: "admin@admin.com",
-//     password: "123",
-//     movimientos: [
-//       { nombre: "2", ingresos: [], egresos: [] },
-//       { nombre: "1", ingresos: [], egresos: [] },
-//       { nombre: "3", ingresos: [], egresos: [] },
-//     ],
-//   },
-//   {
-//     nombre: "admin",
-//     email: "admin@admin.com",
-//     password: "admin",
-//     movimientos: [
-//       {
-//         nombre: "Junio - 22",
-//         ingresos: [
-//           { descripcion: "Sueldo", valor: 45000, id: 1 },
-//           { descripcion: "Nafta", valor: 1500, id: 1 },
-//           { descripcion: "Nafta", valor: 5000, id: 1 },
-//         ],
-//         egresos: [{ descripcion: "Nafta", valor: 10000, id: 1 }],
-//       },
-//       {
-//         nombre: "Abril - 22",
-//         ingresos: [
-//           { descripcion: "Sueldo", valor: 35000, id: 1 },
-//           { descripcion: "Nafta", valor: 3000, id: 1 },
-//         ],
-//         egresos: [{ descripcion: "Nafta", valor: 4750, id: 1 }],
-//       },
-//       {
-//         nombre: "Marzo - 22",
-//         ingresos: [{ descripcion: "Sueldo", valor: 50000, id: 1 }],
-//         egresos: [{ descripcion: "Nafta", valor: 3250, id: 1 }],
-//       },
-//       {
-//         nombre: "Mayo - 22",
-//         ingresos: [{ descripcion: "Sueldo", valor: 40000, id: 1 }],
-//         egresos: [{ descripcion: "Nafta", valor: 2000, id: 1 }],
-//       },
-//     ],
-//   },
-// ];
-let usuarios = [{"nombre":"admin","email":"admin@admin.com","password":"admin","movimientos":[{"nombre":"Marzo - 22","ingresos":[],"egresos":[{"descripcion":"agua","valor":2000,"id":2}],"id":0}],"id":0},{"nombre":"Coder House","email":"coder@house.com","password":"1234","movimientos":[{"nombre":"Mayo - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0},{"descripcion":"gasto 2","valor":500,"id":1}],"id":2},{"nombre":"Abril - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0}],"id":1},{"nombre":"Marzo - 22","ingresos":[{"descripcion":"Sueldo","valor":5500,"id":0}],"egresos":[{"descripcion":"alquiler","valor":2000,"id":0},{"descripcion":"gasto 2","valor":2000,"id":1}],"id":0}],"id":1}];
 
-
+let usuarios = [
+  {
+    nombre: "Coder House",
+    email: "coder@house.com",
+    password: "1234",
+    movimientos: [
+      {
+        nombre: "Mayo - 22",
+        ingresos: [
+          { descripcion: "Sueldo", valor: 35000, id: 0 },
+          { descripcion: "Ingreso 2", valor: 20000, id: 1 },
+        ],
+        egresos: [
+          { descripcion: "Egreso 1", valor: 400, id: 0 },
+          { descripcion: "Egreso 2", valor: 7580, id: 1 },
+          { descripcion: "Egreso 3", valor: 20000, id: 2 },
+          { descripcion: "Egreso 4", valor: 18000, id: 3 },
+        ],
+        id: 2,
+      },
+      {
+        nombre: "Abril - 22",
+        ingresos: [
+          { descripcion: "Sueldo", valor: 45000, id: 0 },
+          { descripcion: "Ingreso 2", valor: 10000, id: 1 },
+        ],
+        egresos: [
+          { descripcion: "Egreso 1", valor: 25000, id: 0 },
+          { descripcion: "Egreso 2", valor: 7500, id: 1 },
+        ],
+        id: 1,
+      },
+      {
+        nombre: "Marzo - 22",
+        ingresos: [
+          { descripcion: "Sueldo", valor: 55000, id: 0 },
+          { descripcion: "ingreso 2", valor: 15000, id: 1 },
+        ],
+        egresos: [
+          { descripcion: "Egreso 1", valor: 2000, id: 0 },
+          { descripcion: "Egreso 2", valor: 3500, id: 1 },
+          { descripcion: "Egreso 3", valor: 10000, id: 2 },
+        ],
+        id: 0,
+      },
+    ],
+    id: 0,
+  },
+];

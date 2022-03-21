@@ -4,3 +4,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 0.5rem 0.5rem,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 0.06rem,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0.5rem
+      0.56rem;
+  background-image: radial-gradient(black 15%, transparent 16%),
+    radial-gradient(black 15%, transparent 16%),
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%),
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 1rem 1rem;
+  //background-repeat-x: initial, initial, initial, initial;
+  //background-repeat-y: initial, initial, initial, initial;
+  background-attachment: fixed;
+  background-origin: initial, initial, initial, initial;
+  background-clip: initial, initial, initial, initial;
+  background-color: #2a2e35;
+  background-color: #2a2e35;
+  background-size: 1rem 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
+}

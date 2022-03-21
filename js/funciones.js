@@ -20,8 +20,6 @@ function logUsuario(email, pass, arrayUs) {
   });
 }
 
-
-
 /*----------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------Periodos----------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -48,8 +46,6 @@ function muestraPeriodos(periodos) {
     select.innerHTML = resultado;
   }
 }
-
-
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------Cabecera y Tablas------------------------------------------------*/
@@ -125,12 +121,11 @@ function cargaTablas(ingresos, egresos) {
 
   ingreso += recorreArregloTableIngresos(ingresos);
   tabla_ingre.innerHTML = ingreso;
-  
 }
 
 //->Devuelve datos del areglo para agregar a tabla(Egresos)
 function recorreArregloTableEgresos(array) {
-  let ban = -1; 
+  let ban = -1;
   let resultado = "";
 
   arreglo = array;
@@ -148,7 +143,7 @@ function recorreArregloTableEgresos(array) {
 
 //->Devuelve datos del areglo para agregar a tabla(Ingresos)
 function recorreArregloTableIngresos(array) {
-  let ban = 1; 
+  let ban = 1;
   let resultado = "";
 
   arreglo = array;
@@ -164,19 +159,12 @@ function recorreArregloTableIngresos(array) {
   return resultado;
 }
 
-
-
-
-
-
-
-
-function eliminar(ban ,idb){
-  let us = localStorage.getItem('us_activo');
-  let periodo =  localStorage.getItem("periodo_activo");
+function eliminar(ban, idb) {
+  let us = localStorage.getItem("us_activo");
+  let periodo = localStorage.getItem("periodo_activo");
   if (ban == 1) {
     usuarios[us].movimientos[periodo].ingresos.splice(idb, 1);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
     cargaCabecera(
       usuarios[us].movimientos[periodo].ingresos,
       usuarios[us].movimientos[periodo].egresos,
@@ -186,10 +174,9 @@ function eliminar(ban ,idb){
       usuarios[us].movimientos[periodo].ingresos,
       usuarios[us].movimientos[periodo].egresos
     );
-    
-  } else if(ban == -1) {
+  } else if (ban == -1) {
     usuarios[us].movimientos[periodo].egresos.splice(idb, 1);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
     cargaCabecera(
       usuarios[us].movimientos[periodo].ingresos,
       usuarios[us].movimientos[periodo].egresos,
@@ -199,17 +186,5 @@ function eliminar(ban ,idb){
       usuarios[us].movimientos[periodo].ingresos,
       usuarios[us].movimientos[periodo].egresos
     );
-    
   }
 }
-
-
-// cargaCabecera(
-//   usuarios[us].movimientos[periodo].ingresos,
-//   usuarios[us].movimientos[periodo].egresos,
-//   usuarios[us].movimientos[periodo].nombre
-// );
-// cargaTablas(
-//   usuarios[us].movimientos[periodo].ingresos,
-//   usuarios[us].movimientos[periodo].egresos
-// );
