@@ -95,7 +95,7 @@ class Movimiento {
 }
 
 /*------------------------------------------varaibles y arrays------------------------------------------*/
-
+//precarga de prueba
 let usuarios = [
   {
     nombre: "Coder House",

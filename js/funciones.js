@@ -125,16 +125,17 @@ function cargaTablas(ingresos, egresos) {
 
 //->Devuelve datos del areglo para agregar a tabla(Egresos)
 function recorreArregloTableEgresos(array) {
+  //ban me sirve para identificar si es un egreso o un ingreso a la hora de elimionar un movimiento
   let ban = -1;
   let resultado = "";
 
   arreglo = array;
-  array.forEach((element) => {
+  array.forEach((element, indice) => {
     resultado += `
         <tr>
           <td>${element.descripcion}</td>
           <td>$${element.valor}</td>
-          <td><button class="del_elemento" onclick="eliminar(${ban}, ${element.id})">Eliminar</button></td>
+          <td><button class="del_elemento" onclick="eliminar(${ban}, ${indice})">Eliminar</button></td>
         </tr>
         `;
   });
@@ -143,6 +144,7 @@ function recorreArregloTableEgresos(array) {
 
 //->Devuelve datos del areglo para agregar a tabla(Ingresos)
 function recorreArregloTableIngresos(array) {
+  //ban me sirve para identificar si es un egreso o un ingreso a la hora de elimionar un movimiento
   let ban = 1;
   let resultado = "";
 

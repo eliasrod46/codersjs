@@ -1,5 +1,4 @@
 /*-----------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------Verifico si existe bbdd de us------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------------*/
 localStorage.getItem("usuarios")
@@ -35,10 +34,11 @@ if (registro && ingreso) {
 /*------------------------------------------------Usuario Logueado------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
 if (localStorage.getItem("us_activo")) {
-  //->guardo guardo datos del usuario y del ultimo periodo
+  //->guardo lso datos del usuario y del ultimo periodo
   let id = localStorage.getItem("us_activo");
   let periodo = 0;
   localStorage.setItem("periodo_activo", periodo);
+  //->pongo el nombre del usuario logeado en la cabecera
   let tituloUsuario = document.getElementById("titulo-usuario");
   tituloUsuario.innerHTML = usuarios[id].nombre;
 
@@ -64,6 +64,7 @@ if (localStorage.getItem("us_activo")) {
     cerrar.addEventListener("click", () => {
       if (localStorage.getItem("us_activo")) {
         localStorage.removeItem("us_activo");
+        localStorage.removeItem("periodo_activo");
         window.location.href = "index.html";
       }
     });
@@ -73,9 +74,6 @@ if (localStorage.getItem("us_activo")) {
   /*----------------------------------------------------Periodos----------------------------------------------------*/
   /*----------------------------------------------------------------------------------------------------------------*/
 
-  //->Muestro los periodos(select)
-  muestraPeriodos(usuarios[id].movimientos);
-
   //->Agregar periodos(form)
   let formPeriodo = document.getElementById("form-nuevo-periodo");
   if (formPeriodo) {
@@ -83,7 +81,7 @@ if (localStorage.getItem("us_activo")) {
       e.preventDefault();
 
       nombrePeriodo = document.getElementById("periodo").value;
-      let mov = new Movimiento(nombrePeriodo, usuarios[id].movimientos.length); //creo objeto movimientosz
+      let mov = new Movimiento(nombrePeriodo, usuarios[id].movimientos.length); //creo objeto movimientos
       usuarios[id].movimientos.push(mov); //lo agrego al array movimientos del usuario
       usuarios[id].movimientos.sort(SortArray);
       localStorage.setItem("usuarios", JSON.stringify(usuarios)); //lo guardo en el localstorage
@@ -92,7 +90,11 @@ if (localStorage.getItem("us_activo")) {
     });
   }
 
-  //->obtengo el periodo seleccionado
+  //->Muestro los periodos cargados(select)
+  muestraPeriodos(usuarios[id].movimientos);
+
+
+  //->cargo los datos del periodo seleccionado
   let selectPeriodo = document.getElementById("form-periodo");
   if (selectPeriodo) {
     selectPeriodo.addEventListener("submit", (e) => {
@@ -148,7 +150,6 @@ if (localStorage.getItem("us_activo")) {
       }
 
       //->Actualizo la vista despues de agregar un movimientos
-
       if (window.location.href.includes("main.html")) {
         cargaCabecera(
           usuarios[id].movimientos[periodo].ingresos,
